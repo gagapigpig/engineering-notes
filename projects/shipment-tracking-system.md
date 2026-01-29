@@ -28,12 +28,8 @@
 
 ## 三、系统整体架构
 
-外部数据源  
-→ 数据接入层  
-→ 标准化转换层  
-→ 领域模型层  
-→ 数据存储层  
-→ 对外 API 层  
+<img width="2086" height="1188" alt="系统架构_副本" src="https://github.com/user-attachments/assets/5b2faad1-47b5-49d0-95b9-dcb9d2e100fd" />
+
 
 ---
 
@@ -48,7 +44,7 @@
 
 ## 五、数据流转过程
 
-<img width="1820" height="942" alt="数据流转过程" src="https://github.com/user-attachments/assets/364af00f-bb85-4600-ad6e-6eb43e4fba48" />
+<img width="1800" height="892" alt="数据流程过程_副本" src="https://github.com/user-attachments/assets/f455e90a-ffc1-4143-b4c9-55b1b73daac1" />
 
 
 ---
