@@ -12,7 +12,7 @@
 
 记录真实参与过的系统架构设计与工程经验
 
-- [企业级航踪系统](projects/shipment-tracking-system.md)
+- [企业级航踪系统](projects/企业级航踪系统总览.md)
 - [支付系统](projects/payment-system.md)
 - [中台系统架构实践](projects/middle-platform.md)
 
