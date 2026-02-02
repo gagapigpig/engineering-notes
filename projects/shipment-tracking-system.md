@@ -3,7 +3,7 @@
 整合多个物流数据供应商的数据，对原始轨迹数据进行采集、清洗、分析并转换为统一标准格式，最终构建通用的货运与载具跟踪数据模型。  
 该系统从多个维度为公司内外系统提供统一、稳定的航运跟踪服务，确保端到端运输信息可追溯。
 
-主要技术栈：Spring Boot、Spring Cloud、DDD、Axon、RabbitMQ、Redis、MySQL、MongoDB
+主要技术栈：Spring Boot、Spring Cloud、DDD、RabbitMQ、Redis、MySQL、MongoDB
 
 ---
 
@@ -35,10 +35,14 @@
 
 ## 四、核心领域模型（DDD 思路）
 
-- Shipment（运单）  
-- Container（集装箱）  
-- Vessel（船舶）  
-- TrackingEvent（轨迹事件）  
+- OceanSub（海运订阅）
+- RailSub（铁路订阅）
+- OceanTracking（海运跟踪）
+- RailTracking（铁路跟踪） 
+- OceanAIS（AIS）
+- PortOfCall（挂靠港）  
+- OceanRisk（风险）
+  
 
 ---
 
@@ -51,25 +55,25 @@
 
 ## 六、关键技术选型
 
-- Spring Boot / Spring Cloud  
-- DDD + Axon  
+- Spring Boot / Spring Cloud
+- camel
+- DDD 
 - RabbitMQ  
 - Redis  
-- MongoDB / MySQL  
+- MongoDB / MySQL
+- XXL-JOB
 
 ---
 
 ## 七、关键设计点
 
-- 幂等处理  
-- 轨迹事件去重  
-- 缓存分层设计  
-- 异步化处理  
+- DDD可追溯
+- 多个数据源用camel统一处理
+- 数据分层设计
+- 数据的分层流转用mq异步处理
+- 多数据库设计，按数据的不同用mongodb和mysql
+- 多个定时器设计，多补偿机制
 
 ---
 
-## 八、核心处理伪代码
 
-
-    save(event)
-    publishDomainEvent(event)
