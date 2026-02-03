@@ -14,7 +14,7 @@
 
 - [企业级航踪系统](projects/企业级航踪系统总览.md)
 - [AI智能客服航踪系统(gpt3.5)](projects/AI智能客服航踪系统(gpt3.5).md)
-- [支付系统](projects/payment-system.md)
+- [支付系统](projects/支付系统总览.md)
 - [中台系统架构实践](projects/middle-platform.md)
 
 ---
